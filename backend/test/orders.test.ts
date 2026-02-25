@@ -1,8 +1,8 @@
 import request from 'supertest';
-import { createApp } from '../src/app.js';
-import { InMemoryOrderRepository } from '../src/repositories/orderRepo.js';
-import { MENU } from '../src/data/menu.js';
-import { OrderService } from '../src/services/orderService.js';
+import { createApp } from '../src/app';
+import { InMemoryOrderRepository } from '../src/repositories/orderRepo';
+import { MENU } from '../src/data/menu';
+import { OrderService } from '../src/services/orderService';
 
 function makeApp() {
   const service = new OrderService(new InMemoryOrderRepository(), MENU);

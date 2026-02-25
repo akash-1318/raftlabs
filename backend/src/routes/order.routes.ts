@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { validateBody } from '../middleware/validate.js';
-import { createOrderSchema, patchStatusSchema } from '../validators/orderSchemas.js';
-import type { OrderService } from '../services/orderService.js';
-import type { OrderStatus } from '../domain/order.js';
+import { validateBody } from '../middleware/validate';
+import { createOrderSchema, patchStatusSchema } from '../validators/orderSchemas';
+import type { OrderService } from '../services/orderService';
+import type { OrderStatus } from '../domain/order';
 
 export const orderRouter = (service: OrderService) => {
   const r = Router();

@@ -1,9 +1,9 @@
 import http from 'http';
-import { createApp } from './app.js';
-import { InMemoryOrderRepository } from './repositories/orderRepo.js';
-import { MENU } from './data/menu.js';
-import { OrderService } from './services/orderService.js';
-import { WsHub } from './realtime/wsHub.js';
+import { createApp } from './app';
+import { InMemoryOrderRepository } from './repositories/orderRepo';
+import { MENU } from './data/menu';
+import { OrderService } from './services/orderService';
+import { WsHub } from './realtime/wsHub';
 
 const PORT = Number(process.env.PORT ?? 4000);
 

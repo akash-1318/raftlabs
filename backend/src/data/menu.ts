@@ -1,4 +1,4 @@
-import type { MenuItem } from '../domain/order.js';
+import type { MenuItem } from '../domain/order';
 
 export const MENU: MenuItem[] = [
   {

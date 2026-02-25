@@ -1,8 +1,8 @@
-import { nanoid } from 'nanoid';
-import type { MenuItem, Order, OrderStatus } from '../domain/order.js';
-import { ORDER_STATUSES } from '../domain/order.js';
-import type { OrderRepository } from '../repositories/orderRepo.js';
-import type { WsHub } from '../realtime/wsHub.js';
+import crypto from 'crypto';
+import type { MenuItem, Order, OrderStatus } from '../domain/order';
+import { ORDER_STATUSES } from '../domain/order';
+import type { OrderRepository } from '../repositories/orderRepo';
+import type { WsHub } from '../realtime/wsHub';
 
 export class OrderService {
   constructor(
@@ -20,7 +20,7 @@ export class OrderService {
     items: Array<{ menuItemId: string; quantity: number }>;
   }): Order {
     const now = new Date().toISOString();
-    const id = `ORD-${nanoid(10).toUpperCase()}`;
+    const id = `ORD-${crypto.randomUUID().toUpperCase()}`;
 
     const items = input.items.map(({ menuItemId, quantity }) => {
       const menuItem = this.menu.find((m) => m.id === menuItemId);

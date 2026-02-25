@@ -1,4 +1,4 @@
-import type { Order, OrderStatus } from '../domain/order.js';
+import type { Order, OrderStatus } from '../domain/order';
 
 export interface OrderRepository {
   create(order: Order): void;

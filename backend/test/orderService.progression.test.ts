@@ -1,6 +1,6 @@
-import { InMemoryOrderRepository } from '../src/repositories/orderRepo.js';
-import { MENU } from '../src/data/menu.js';
-import { OrderService } from '../src/services/orderService.js';
+import { InMemoryOrderRepository } from '../src/repositories/orderRepo';
+import { MENU } from '../src/data/menu';
+import { OrderService } from '../src/services/orderService';
 
 describe('OrderService status progression', () => {
   beforeEach(() => {

@@ -3,11 +3,11 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
-import { menuRouter } from './routes/menu.routes.js';
-import { orderRouter } from './routes/order.routes.js';
-import { notFound, errorHandler } from './middleware/errorHandler.js';
-import type { OrderService } from './services/orderService.js';
-import { openapiSpec } from './docs/openapi.js';
+import { menuRouter } from './routes/menu.routes';
+import { orderRouter } from './routes/order.routes';
+import { notFound, errorHandler } from './middleware/errorHandler';
+import type { OrderService } from './services/orderService';
+import { openapiSpec } from './docs/openapi';
 
 export function createApp(service: OrderService) {
   const app = express();
