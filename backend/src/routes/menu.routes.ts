@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import type { OrderService } from '../services/orderService.js';
+
+export const menuRouter = (service: OrderService) => {
+  const r = Router();
+
+  r.get('/', (_req, res) => {
+    res.json(service.getMenu());
+  });
+
+  return r;
+};
